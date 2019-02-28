@@ -9,9 +9,9 @@ RUN apt-get update && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN echo Install OWASP Dependency Check CLI && \
-	wget -q http://dl.bintray.com/jeremy-long/owasp/dependency-check-4.0.0-release.zip && \
-	unzip -q dependency-check-4.0.0-release.zip && \
-	rm -f dependency-check-4.0.0-release.zip && \
+	wget -q http://dl.bintray.com/jeremy-long/owasp/dependency-check-5.0.0-M1-release.zip && \
+	unzip -q dependency-check-5.0.0-M1-release.zip && \
+	rm -f dependency-check-5.0.0-M1-release.zip && \
 	mv dependency-check /usr/local/ && \
 	echo export PATH=\$PATH:/usr/local/dependency-check/bin >> /etc/profile && \
 	. /etc/profile && \
