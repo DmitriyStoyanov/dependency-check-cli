@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-slim
+FROM openjdk:11.0.3-jre-slim
 
 ENV DISTR_DIR /distr
 WORKDIR $DISTR_DIR
