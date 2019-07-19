@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-slim AS builder
+FROM openjdk:11.0.4-jre-slim AS builder
 
 ENV DEPCHECK_VER 5.1.1
 
@@ -14,7 +14,7 @@ RUN echo Install OWASP Dependency Check CLI && \
 	. /etc/profile && \
 	dependency-check.sh -v
 
-FROM openjdk:8-jre-slim
+FROM openjdk:11.0.4-jre-slim
 ENV PATH="${PATH}:/opt/dependency-check/bin"
 COPY --from=builder /opt/dependency-check /opt/dependency-check
 COPY --from=builder /etc/profile /etc/profile
