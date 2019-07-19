@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-slim AS builder
 
-ENV DEPCHECK_VER 5.0.0
+ENV DEPCHECK_VER 5.1.1
 
 RUN apt-get update && \
 	apt-get install -y wget unzip
