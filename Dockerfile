@@ -1,12 +1,12 @@
 FROM openjdk:8-jre-slim AS builder
 
-ENV DEPCHECK_VER 5.1.1
+ENV DEPCHECK_VER 8.3.1
 
 RUN apt-get update && \
 	apt-get install -y wget unzip
 
 RUN echo Install OWASP Dependency Check CLI && \
-	wget -q http://dl.bintray.com/jeremy-long/owasp/dependency-check-${DEPCHECK_VER}-release.zip && \
+	wget -q https://github.com/jeremylong/DependencyCheck/releases/download/v$DEPCHECK_VER/dependency-check-$DEPCHECK_VER-release.zip && \
 	unzip -q dependency-check-${DEPCHECK_VER}-release.zip && \
 	rm -f dependency-check-${DEPCHECK_VER}-release.zip && \
 	mv dependency-check /opt/ && \

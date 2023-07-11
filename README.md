@@ -5,6 +5,8 @@ OWASP Dependency Check CLI Docker Container
 
 This repository contain the Dockerfile to create container with OWASP Dependency Check CLI utility
 
+Based on https://github.com/jeremylong/DependencyCheck/ repository tool 
+
 ## Docker build
 
 ### 1. Build docker container
